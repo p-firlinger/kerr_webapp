@@ -28,7 +28,7 @@ def main():
     p_r0 = st.sidebar.slider("Initial p_r", -10.0, 10.0, 0.0)
     p_theta0 = st.sidebar.slider("Initial p_θ", -10.0, 10.0, 0.0)
     p_phi0 = st.sidebar.slider("Initial p_φ", -10.0, 10.0, -2.0)
-    a = st.sidebar.slider("Spin parameter a", 0.0, 0.99, 0)
+    a = st.sidebar.slider("Spin parameter a", 0.0, 0.99, 0.0)
     M = st.sidebar.slider("Mass (M)", 1.0, 100.0, 1.0)
     lambda1 = st.sidebar.slider("Affine parameter range λ",100.0, 50.0)
     axis_lim = st.sidebar.slider("Axis limit (zoom)",0, 100, 10)
