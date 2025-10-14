@@ -14,7 +14,7 @@ def main():
     """
 
     st.set_page_config(page_title="Kerr Geodesic Visualizer", layout="wide")
-    st.title("🌀 Geodesic Explorer in Kerr Spacetime")
+    st.title("Geodesic Explorer in Kerr Spacetime")
     st.markdown("""
     **Explore the paths of light particles (photons) near a spinning ("Kerr"-) black hole!**  
     This tool lets you adjust initial conditions (spherical position and momentum components) and see how light behaves in Kerr space-time.  
@@ -23,7 +23,7 @@ def main():
     # Sidebar inputs
     st.sidebar.header("Initial Conditions & Black Hole Parameters")
     r0 = st.sidebar.slider("Initial r", 1.0, 50.0, 3.0)
-    theta0 = st.sidebar.slider("Initial θ (deg)", 0.0, np.pi, 90.0)
+    theta0 = st.sidebar.slider("Initial θ (deg)", 0.0, np.pi, np.pi/2)
     phi0 = st.sidebar.slider("Initial φ (deg)", 0.0, 2*np.pi, 0.0)
     p_r0 = st.sidebar.slider("Initial p_r", -10.0, 10.0, 0.0)
     p_theta0 = st.sidebar.slider("Initial p_θ", -10.0, 10.0, 0.0)
