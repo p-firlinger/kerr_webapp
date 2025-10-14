@@ -31,7 +31,7 @@ def main():
     a = st.sidebar.slider("Spin parameter a", 0.0, 0.99, 0.0)
     M = st.sidebar.slider("Mass (M)", 1.0, 100.0, 1.0)
     lambda1 = st.sidebar.slider("Affine parameter range λ",100.0, 50.0)
-    axis_lim = st.sidebar.slider("Axis limit (zoom)",0, 100, 10)
+    axis_lim = st.sidebar.slider("Axis limit (zoom)",0, 100, 5)
     if st.sidebar.button("Run Geodesic Integration"):
         with st.spinner("Computing geodesic..."):
             kerr = KerrMetric(M, a)
