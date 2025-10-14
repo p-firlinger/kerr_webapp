@@ -1,0 +1,52 @@
+# Python bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+venv/
+.venv/
+env/
+ENV/
+.env
+.env.*
+
+# Distribution / build
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# Pytest / coverage
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Notebook output images (large/generated)
+notebooks/images/
+notebooks/**/images/
+image_interpreter/*.png
+image_interpreter/*.svg
+
+# Model artifacts and checkpoints
+image_interpreter/*.pkl
+models/
+checkpoints/
+*.h5
+*.pt
+*.ckpt
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editors / IDEs
+.vscode/
+.idea/
+
+# Misc
+*.log
+*.swp
