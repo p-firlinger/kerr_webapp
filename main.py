@@ -77,13 +77,7 @@ def main():
                     opacity=1
                 ))
 
-            # 3️⃣ Add geodesic line (fixed)
-            fig.add_trace(go.Scatter3d(
-                x=x, y=y, z=z,
-                mode='lines',
-                line=dict(color='darkred', width=5),
-                name='Photon path'
-            ))
+            
 
             # 4️⃣ Add moving photon dot
             fig.add_trace(go.Scatter3d(
@@ -94,16 +88,28 @@ def main():
             ))
             photon_trace_index = len(fig.data) - 1  
 
+            fig.add_trace(go.Scatter3d(
+                x=[x[0]],
+                y=[y[0]],
+                z=[z[0]],
+                mode='lines+markers',
+                line=dict(color='darkred', width=5),
+                marker=dict(size=10, color='black'),
+                name='Photon'
+            ))
             # 5️⃣ Build frames
             frames = [
                 go.Frame(
                     data=[go.Scatter3d(
-                        x=[x[i]], y=[y[i]], z=[z[i]],
-                        mode='markers',
+                        x=x[:i+1],  # line grows with the photon
+                        y=y[:i+1],
+                        z=z[:i+1],
+                        mode='lines+markers',  # show both line and moving dot
+                        line=dict(color='darkred', width=5),
                         marker=dict(size=10, color='black')
                     )],
                     name=str(i),
-                    traces=[photon_trace_index]
+                    traces=[0]  # the first trace is now animated
                 )
                 for i in range(len(x))
             ]
