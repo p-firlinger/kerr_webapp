@@ -40,7 +40,7 @@ def main():
             lambda_span = (0, lambda1)
             S0 = np.array([0, r0, theta0, phi0, p_r0, p_theta0, p_phi0])
             integrator = GeodesicIntegrator(kerr, M)
-            solution = integrator.integrate(S0, lambda_span, 0.05)
+            solution = integrator.integrate(S0, lambda_span, 0.01)
 
             r, theta, phi = solution.y[1], solution.y[2], solution.y[3]
             # Subsample if too long
