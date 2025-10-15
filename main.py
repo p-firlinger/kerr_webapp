@@ -80,7 +80,7 @@ def main():
             
 
             # 4️⃣ Add moving photon dot
-            """fig.add_trace(go.Scatter3d(
+            fig.add_trace(go.Scatter3d(
                 x=[x[0]], y=[y[0]], z=[z[0]],
                 mode='markers',
                 marker=dict(size=10, color='black'),
@@ -96,9 +96,9 @@ def main():
                 line=dict(color='darkred', width=5),
                 marker=dict(size=5, color='darkred'),
                 name='Photon path'
-            ))"""
+            ))
             # 5️⃣ Build frames
-            frames = [
+            """frames = [
                 go.Frame(
                     data=[go.Scatter3d(
                         x=x[:i+1],  # line grows with the photon
@@ -114,7 +114,7 @@ def main():
                 for i in range(len(x))
             ]
 
-            fig.frames = frames
+            fig.frames = frames"""
 
             # 6️⃣ Layout and animation buttons
             fig.update_layout(
