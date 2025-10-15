@@ -94,7 +94,7 @@ def main():
                 z=[z[0]],
                 mode='lines+markers',
                 line=dict(color='darkred', width=5),
-                marker=dict(size=10, color='black'),
+                marker=dict(size=5, color='darkred'),
                 name='Photon'
             ))
             # 5️⃣ Build frames
